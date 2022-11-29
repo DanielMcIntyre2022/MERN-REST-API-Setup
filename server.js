@@ -8,4 +8,9 @@ db();
 
 const app = express();
 
+// Link to Routes //
+
+const userRouter = require('./routes/users');
+app.use('/users', userRouter);
+
 app.listen(port, console.log(`listening on port: ${port}`));
